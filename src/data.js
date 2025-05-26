@@ -2895,6 +2895,96 @@ const assaultMissionNodes = [
   },
 ];
 
+const infestedSalvageMissionNodes = [
+  {
+    Planet: "Eris",
+    Name: "Oestrus",
+    Faction: "Infested",
+    CreditReward: 4300,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "Salvage",
+    Level: "34 - 38",
+    TileSet: "Infested Ship",
+  },
+];
+
+const legacyteHarvestMissionNodes = [
+  {
+    Planet: "Höllvania",
+    Name: "Köbinn West",
+    Faction: "Techrot",
+    CreditReward: 7400,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "1999LegacyteHarvest",
+    Level: "65 - 70",
+    TileSet: "Höllvania",
+  },
+];
+
+const pursuitMissionNodes = [
+  {
+    Planet: "Saturn",
+    Name: "Pandora",
+    Faction: "Grineer",
+    CreditReward: 3000,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "AWPursuit",
+    Level: "21 - 23",
+    TileSet: "Free Space",
+  },
+];
+
+const rushMissionNodes = [
+  {
+    Planet: "Phobos",
+    Name: "Kepler",
+    Faction: "Corpus",
+    CreditReward: 2100,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "AWRush",
+    Level: "12 - 14",
+    TileSet: "Corpus Ship (Archwing)",
+  },
+];
+
+const voidArmageddonMissionNodes = [
+  {
+    Planet: "Zariman Ten Zero",
+    Name: "Oro Works",
+    Faction: "Grineer or Corpus",
+    CreditReward: 5900,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "VoidArmageddon",
+    Level: "50 - 55",
+    TileSet: "Zariman (Tileset)",
+  },
+];
+
+const voidCascadeMissionNodes = [
+  {
+    Planet: "Zariman Ten Zero",
+    Name: "Tuvul Commons",
+    Faction: "Grineer or Corpus",
+    CreditReward: 5900,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "VoidCascade",
+    Level: "50 - 55",
+    TileSet: "Zariman (Tileset)",
+  },
+];
+
+const voidFloodMissionNodes = [
+  {
+    Planet: "Zariman Ten Zero",
+    Name: "Everview Arc",
+    Faction: "Grineer or Corpus",
+    CreditReward: 5900,
+    AdditionalCreditReward: 0,
+    DropTableAlias: "VoidFlood",
+    Level: "50 - 55",
+    TileSet: "Zariman (Tileset)",
+  },
+];
 const allMissionTypes = [
   volatileMissionNodes,
   survivalMissionNodes,
@@ -2915,6 +3005,13 @@ const allMissionTypes = [
   exterminateMissionNodes,
   hijackMissionNodes,
   interceptionMissionNodes,
+  infestedSalvageMissionNodes,
+  legacyteHarvestMissionNodes,
+  pursuitMissionNodes,
+  rushMissionNodes,
+  voidArmageddonMissionNodes,
+  voidCascadeMissionNodes,
+  voidFloodMissionNodes,
 ];
 
 export default allMissionTypes;
