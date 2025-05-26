@@ -14,32 +14,39 @@ const Missions = () => {
     Level: "17 - 20",
     TileSet: "Free Space",
   });
-  const [currentMissionTypeData, setCurrentMissionTypeData] =
-    useState(allMissionTypes);
-  const [previousMissionTypeData, setPreviousMissionTypeData] = useState(
-    "Previous Mission Type Data"
-  );
+  const [currentMissionType, setCurrentMissionType] = useState("Unknown");
 
   //GET RANDOM MISSION -----------------------
   const functionGetRandomMission = () => {
     const randomMissionType =
-      currentMissionTypeData[
-        Math.floor(Math.random() * currentMissionTypeData.length)
-      ];
+      allMissionTypes[Math.floor(Math.random() * allMissionTypes.length)];
     const randomMission =
       randomMissionType[Math.floor(Math.random() * randomMissionType.length)];
     setCurrentMission(randomMission);
     console.log("THIS IS THE PLANET", randomMission.Planet);
-    console.log(currentMission);
+    console.log(randomMission);
   };
 
   //EXCLUDE RAILJACK -----------------------
   const functionExcludeRailjack = () => {
-    console.log(
-      setCurrentMissionTypeData(
-        currentMissionTypeData.filter((missionType) => missionType.Planet)
-      )
-    );
+    const noRailjack = allMissionTypes
+      .map((type) => {
+        return type.filter(
+          (mission) => !mission.Planet.split(" ").includes("Proxima")
+        );
+      })
+      .filter((type) => type.length > 0);
+
+    if (noRailjack.length === 0) {
+      console.log("No missions available after filtering");
+      return;
+    }
+
+    const randomMissionType =
+      noRailjack[Math.floor(Math.random() * noRailjack.length)];
+    const randomMission =
+      randomMissionType[Math.floor(Math.random() * randomMissionType.length)];
+    setCurrentMission(randomMission);
   };
   return (
     <div className="mission">
